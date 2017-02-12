@@ -4,8 +4,8 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-
-var book= {
+var shop={
+     book:{
     title:'book section',
     heading:'what type of book you want',
     date:'feb 12',
@@ -18,8 +18,46 @@ var book= {
               <p>
                  love yoursef and make others to lovelove yoursef and make others to lovelove yoursef and make others to lovelove yoursef and make others to lovelove yoursef and make others to love
              </p>`
+},
+     electronics:{
+        title:'electronic section',
+        heading:'what type of electronic item you want',
+        date:'feb 13',
+        content:` <p>
+                 <p>
+                  asus rog,alienware,msi,predator are the best gaming laptops we suggested for you....
+             </p>
+              <p>
+                asus rog,alienware,msi,predator are the best gaming laptops we suggested for you....
+             </p>
+              <p>
+                asus rog,alienware,msi,predator are the best gaming laptops we suggested for you....
+             </p>`
 
+    },
+     clothings: {
+         
+           title:'clothing section',
+           heading:'what type of cloth item you want',
+           date:'feb 14',
+             content:` <p>
+                   pencil fit,bairava dress are available...
+                         order soon 
+                   home delivery within a day...!!! 
+               </p>
+              <p>
+                 pencil fit,bairava dress are available...
+                         order soon 
+                   home delivery within a day...!!! 
+             </p>
+              <p>
+                pencil fit,bairava dress are available...
+                         order soon 
+                   home delivery within a day...!!! 
+             </p>`}
+    
 };
+
 function createtemplate (data) {
     var title= data.title;
     var heading= data.heading;
