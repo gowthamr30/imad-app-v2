@@ -101,17 +101,13 @@ app.get('/:shopname', function (req, res) {
    var shopname=req.params.shopname;
    res.send(createtemplate (shop[shopname]));
 });
-
-app.get('/electronics', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'electronics.html'));
-});
-
-app.get('/clothings', function (req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'clothings.html'));
-});
-
+ 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+});
+
+app.get('/ui/main.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
 app.get('/ui/madi.png', function (req, res) {
