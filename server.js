@@ -21,11 +21,11 @@ var book= {
 
 };
 function createtemplate (data) {
-var title= data.title;
-var heading= data.heading;
-var date= data.date;
-var content= data.content;
-var htmltempalte = `
+    var title= data.title;
+    var heading= data.heading;
+    var date= data.date;
+    var content= data.content;
+    var htmltempalte = `
  <html>
  <head>
      <title>
