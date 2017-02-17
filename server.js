@@ -102,6 +102,10 @@ app.get('/:shopname', function (req, res) {
    res.send(createtemplate (shop[shopname]));
 });
  
+ app.get('/ui/toggle.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'toggle.html'));
+ });
+  
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
