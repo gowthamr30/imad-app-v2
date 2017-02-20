@@ -56,7 +56,6 @@ var shop={
                    home delivery within a day...!!! 
              </p>`}
 };
-
 function createtemplate (data) {
     var title= data.title;
     var heading= data.heading;
@@ -97,14 +96,14 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-//app.get('/:shopname', function (req, res) {
-  // var shopname=req.params.shopname;
-   //res.send(createtemplate (shop[shopname]));
-//});
+app.get('/:shopname', function (req, res) {
+ var shopname=req.params.shopname;
+res.send(createtemplate (shop[shopname]));
+});
  
- app.get('/ui/toggle.html', function (req, res) {
+/* app.get('/ui/toggle.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'toggle.html'));
- });
+ });*/
   
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
